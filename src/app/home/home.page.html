@@ -10,12 +10,12 @@
       </div>
     </div>
     <div class="get-started-button">
-      <button>Get started</button>
+      <button [routerLink]="['/signup']">Get started</button>
     </div>
   </div>
   <div class="company">Invergent Technologies Limited</div>
 
-  <ion-slides class="slides" [options]="slideOpts">
+  <ion-slides class="slides">
     <ion-slide *ngFor="let bg of bgs" class="slide">
       <div [ngStyle]="{'background-image': 'url(/assets/images/' + bg + ')'}"></div>
     </ion-slide>

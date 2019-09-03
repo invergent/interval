@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">
+      <img src="/assets/images/logo-inv.png" alt="Logo">
+      <p>Interval</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="description">Tell us a little about you.</div>
+  <div class="profile-form">
+    <form #profileForm="ngForm" (ngSubmit)="handleSubmit(profileForm)" novalidate>
+      <div class="input-wrapper">
+        <input (ngModel)="firstname" name="firstname" required/>
+        <div class="placeholder">Firstname</div>
+      </div>
+      <div class="input-wrapper">
+        <input (ngModel)="lastname" name="lastname" (focus)="focusedInput='lastname'" (blur)="focusedInput=''" required/>
+        <div class="placeholder">Lastname</div>
+      </div>
+      <div class="input-wrapper">
+        <input (ngModel)="email" name="email" type="text" (focus)="focusedInput='email'" (blur)="focusedInput=''" required/>
+        <div class="placeholder">Email address</div>
+      </div>
+      <div class="input-wrapper">
+        <input (ngModel)="password" name="password" type="password" (focus)="focusedInput='password'" (blur)="focusedInput=''" required/>
+        <div class="placeholder">Password</div>
+      </div>
+      <div class="input-wrapper">
+        <input (ngModel)="confirmPassword" name="confirmPassword" type="password" (focus)="focusedInput='confirmPassword'" (blur)="focusedInput=''" required/>
+        <div class="placeholder">Confirm password</div>
+      </div>
+      <ion-button expand="block" type="submit">
+        Sign me up!
+        <ion-spinner *ngIf='loading' name="lines"></ion-spinner>
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

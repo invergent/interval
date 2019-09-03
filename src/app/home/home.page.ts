@@ -10,7 +10,7 @@ export class HomePage {
     loop: true,
     speed: 400
   };
-  bgs: string[] = ['sandra.png', 'study.jpg', 'working-c.png'];
+  bgs: string[] = ['sandra.png'];
 
   constructor() {}
 
